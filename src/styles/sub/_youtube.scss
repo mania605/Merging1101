@@ -211,6 +211,8 @@ main {
  	padding: 0; /* 여백 제거 */
 	display:flex ;
 	justify-content: center;
+	overflow: hidden;
+	box-sizing: border-box;
  
 }
 
@@ -221,7 +223,7 @@ main {
 	aspect-ratio: 4/3;
   gap: 30px;
 	margin-top: 20px;
-
+	box-sizing: border-box;
 }
  
 
@@ -315,15 +317,13 @@ main {
 	}
 
     .video-grid {
-			grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
+			grid-template-columns: repeat(2, 1fr); 
     }
 
 	}
 
 /* 반응형: 더 좁아질 때 1열로 배치 */
 @media screen and (max-width: $mobile) {
-	
-
 
 	.swiper-slide {
 		width: 100%;
